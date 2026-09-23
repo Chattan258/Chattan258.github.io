@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="陈彦好的个人网站：量化研究、量化开发与项目实践。">
+  <meta name="theme-color" content="#0a2035">
+  <title>陈彦好 | 量化研究与量化开发</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至正文</a>
+
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#work">项目</a>
+        <a href="#contact">联系</a>
+        <a class="nav-resume" href="assets/陈彦好_华中科技大学.pdf" download>下载简历 <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="shell hero-layout">
+        <div class="hero-copy">
+          <p class="hero-field"><span class="live-dot" aria-hidden="true"></span> 量化研究 / 量化开发</p>
+          <h1 id="hero-name">陈彦好</h1>
+          <p class="hero-roman">CHEN YANHAO</p>
+          <p class="hero-lead">把研究假设放进数据里检验，<br>再让有效的策略走向实际运行。</p>
+          <p class="hero-body">华中科技大学经济统计学本科背景。关注数据整理、因子研究、策略回测与交易系统落地的完整过程。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">查看项目 <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="assets/陈彦好_华中科技大学.pdf" download>下载简历 PDF</a>
+          </div>
+        </div>
+
+        <figure class="signal-visual">
+          <div class="signal-topline">
+            <span class="signal-title">Research signal</span>
+            <span class="signal-state"><b aria-hidden="true"></b> PROCESS / 01</span>
+          </div>
+          <svg class="signal-svg" viewBox="0 0 700 510" role="img" aria-labelledby="signal-svg-title">
+            <title id="signal-svg-title">以数据、策略、回测与执行为节点的量化研究流程示意图</title>
+            <defs>
+              <pattern id="signal-grid" width="38" height="38" patternUnits="userSpaceOnUse">
+                <path d="M38 0H0V38" fill="none" stroke="#8bb3c2" stroke-opacity=".12" stroke-width="1"/>
+              </pattern>
+              <linearGradient id="signal-stroke" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#72d9d0"/>
+                <stop offset=".58" stop-color="#9fe9dc"/>
+                <stop offset="1" stop-color="#fac287"/>
+              </linearGradient>
+              <filter id="signal-glow">
+                <feGaussianBlur stdDeviation="9"/>
+              </filter>
+            </defs>
+            <rect width="700" height="510" fill="url(#signal-grid)"/>
+            <path class="signal-axis" d="M42 395H662M42 274H662M42 153H662"/>
+            <path class="signal-shadow" d="M54 365C105 349 132 383 180 333S262 348 307 273S381 300 426 211S515 235 555 146S617 164 656 98"/>
+            <path class="signal-path" d="M54 365C105 349 132 383 180 333S262 348 307 273S381 300 426 211S515 235 555 146S617 164 656 98"/>
+            <path class="signal-guide" d="M180 333V395M307 273V395M426 211V395M555 146V395"/>
+            <g class="signal-points">
+              <circle cx="180" cy="333" r="6"/><circle cx="307" cy="273" r="6"/>
+              <circle cx="426" cy="211" r="6"/><circle cx="555" cy="146" r="6"/>
+            </g>
+            <g class="signal-annotations">
+              <text x="150" y="426">DATA</text>
+              <text x="282" y="426">FACTOR</text>
+              <text x="390" y="426">BACKTEST</text>
+              <text x="525" y="426">EXECUTION</text>
+            </g>
+            <circle class="signal-end-halo" cx="656" cy="98" r="18"/>
+            <circle class="signal-end" cx="656" cy="98" r="7"/>
+          </svg>
+          <figcaption>研究流程示意 · 从数据到执行</figcaption>
+          <span class="visual-corner visual-corner-top" aria-hidden="true"></span>
+          <span class="visual-corner visual-corner-bottom" aria-hidden="true"></span>
+        </figure>
+      </div>
+      <div class="shell hero-bottom">
+        <span>研究 / 开发 / 验证</span>
+        <a href="#about">继续了解 <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="shell about-layout">
+        <div>
+          <p class="section-tag">关于我</p>
+          <h2 id="about-title">从研究思路<br>到实际运行</h2>
+        </div>
+        <div class="about-right">
+          <p class="about-intro">我的研究与实践涉及加密资产、商品期货和 A 股，也独立搭建过从回测到实盘运行的交易系统。</p>
+          <p>在工作中使用 Cursor 构建量化交易系统，使用 Codex 开发在研的量化选股项目，积累了 Vibe Coding 项目经验。</p>
+          <div class="research-flow" aria-label="研究路径">
+            <span>数据与特征</span>
+            <span>策略与回测</span>
+            <span>交易与执行</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="work-heading">
+          <div>
+            <p class="section-tag">项目实践</p>
+            <h2 id="work-title">让研究有迹可循</h2>
+          </div>
+          <p>这里展示我正在持续完善的量化研究项目。已公开的研究记录可在 GitHub 查看。</p>
+        </div>
+
+        <article class="project project-crypto">
+          <div class="project-copy">
+            <p class="project-type">加密资产 <span aria-hidden="true">/</span> 个人项目</p>
+            <h3>加密资产量化回测<br>与交易系统</h3>
+            <p>构建截面多空策略，覆盖因子研究、多因子组合、样本内外回测与 OKX 实盘运行。</p>
+            <a class="project-link" href="https://github.com/Chattan258/Crypto-Tradingsystem" target="_blank" rel="noopener noreferrer">查看 GitHub 项目 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="crypto-diagram" aria-hidden="true">
+            <div class="diagram-grid"></div>
+            <svg viewBox="0 0 520 310" preserveAspectRatio="none">
+              <path class="crypto-track" d="M0 235L64 221L112 242L164 175L214 189L267 119L317 140L362 80L410 105L462 41L520 60"/>
+              <path class="crypto-track-secondary" d="M0 267L62 259L111 270L165 231L213 241L265 192L315 210L362 162L412 174L463 131L520 148"/>
+            </svg>
+            <span class="diagram-label diagram-label-top">RESEARCH / LIVE</span>
+            <span class="diagram-label diagram-label-bottom">FACTOR → PORTFOLIO → EXECUTION</span>
+          </div>
+        </article>
+
+        <article class="project project-stock">
+          <div class="stock-diagram" aria-hidden="true">
+            <span class="stock-heading">XGBOOST / EQUITY</span>
+            <div class="stock-bars">
+              <i style="--bar:40%"></i><i style="--bar:66%"></i><i style="--bar:51%"></i>
+              <i style="--bar:78%"></i><i style="--bar:57%"></i><i style="--bar:89%"></i>
+              <i style="--bar:69%"></i><i style="--bar:96%"></i><i style="--bar:73%"></i>
+              <i style="--bar:84%"></i>
+            </div>
+            <span class="stock-legend">FUNDAMENTALS / FEATURES / OUT-OF-SAMPLE</span>
+          </div>
+          <div class="project-copy">
+            <p class="project-type">A 股 <span aria-hidden="true">/</span> 个人项目 <span aria-hidden="true">/</span> 在研</p>
+            <h3>股票端量化<br>选股策略</h3>
+            <p>根据基本面数据划分股票标的池，使用 XGBoost 分析指标特征、预测股票涨跌，并进行样本外回测。</p>
+            <span class="project-status"><b aria-hidden="true"></b> 研究进行中</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-layout">
+        <div>
+          <p class="section-tag">联系</p>
+          <h2 id="contact-title">聊聊研究与项目。</h2>
+          <p>关于量化研究或项目交流，欢迎通过邮件联系。</p>
+        </div>
+        <a class="contact-email" href="mailto:1194328411@qq.com">1194328411@qq.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>陈彦好 <span class="footer-english">Chen Yanhao</span></span>
+      <a href="#top">返回顶部 ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
