@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#0a2035">
   <title>陈彦好 | 量化研究与量化开发</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=20261006">
   <script src="assets/site.js" defer></script>
 </head>
 <body>
@@ -102,7 +102,7 @@
         </div>
         <div class="about-right">
           <p class="about-intro">研究与实践涉及加密资产、商品期货和沪深 A 股；<br>独立搭建了从回测到实盘运行的交易系统。</p>
-          <p>工作中使用 Cursor 和 Codex 构建量化交易系统与量化选股项目，积累了较丰富的 Vibe Coding 项目经验。</p>
+          <p>工作中使用 Cursor 和 Codex 构建量化交易系统与神经网络量化研究项目，积累了较丰富的 Vibe Coding 项目经验。</p>
           <div class="research-flow" aria-label="研究路径">
             <span>数据与特征</span>
             <span>策略与回测</span>
@@ -140,22 +140,52 @@
           </div>
         </article>
 
-        <article class="project project-stock">
-          <div class="stock-diagram" aria-hidden="true">
-            <span class="stock-heading">XGBOOST / EQUITY</span>
-            <div class="stock-bars">
-              <i style="--bar:40%"></i><i style="--bar:66%"></i><i style="--bar:51%"></i>
-              <i style="--bar:78%"></i><i style="--bar:57%"></i><i style="--bar:89%"></i>
-              <i style="--bar:69%"></i><i style="--bar:96%"></i><i style="--bar:73%"></i>
-              <i style="--bar:84%"></i>
-            </div>
-            <span class="stock-legend">FUNDAMENTALS / FEATURES / OUT-OF-SAMPLE</span>
-          </div>
+        <article class="project project-stock" aria-labelledby="stock-title">
+          <figure class="stock-diagram">
+            <span class="stock-heading">MLP / CSI 1000</span>
+            <svg class="stock-network" viewBox="0 0 500 300" role="img" aria-labelledby="stock-network-title">
+              <title id="stock-network-title">量价、技术、财务与 JEV 公告事件特征进入 MLP，输出上涨、中性、下跌三分类信号的结构示意图</title>
+              <g class="network-connections">
+                <path d="M118 56L220 70M118 56L220 150M118 56L220 230M118 114L220 70M118 114L220 150M118 114L220 230M118 172L220 70M118 172L220 150M118 172L220 230M118 230L220 70M118 230L220 150M118 230L220 230"/>
+                <path d="M220 70L310 70M220 70L310 150M220 70L310 230M220 150L310 70M220 150L310 150M220 150L310 230M220 230L310 70M220 230L310 150M220 230L310 230"/>
+                <path d="M310 70L400 70M310 70L400 150M310 70L400 230M310 150L400 70M310 150L400 150M310 150L400 230M310 230L400 70M310 230L400 150M310 230L400 230"/>
+              </g>
+              <g class="network-inputs">
+                <rect x="8" y="38" width="110" height="36" rx="6"/><text x="63" y="56">量价数据</text>
+                <rect x="8" y="96" width="110" height="36" rx="6"/><text x="63" y="114">技术指标</text>
+                <rect x="8" y="154" width="110" height="36" rx="6"/><text x="63" y="172">财务信息</text>
+                <rect x="8" y="212" width="110" height="36" rx="6"/><text x="63" y="230">JEV 公告事件</text>
+              </g>
+              <g class="network-hidden">
+                <circle cx="220" cy="70" r="9"/><circle cx="220" cy="150" r="9"/><circle cx="220" cy="230" r="9"/>
+                <circle cx="310" cy="70" r="9"/><circle cx="310" cy="150" r="9"/><circle cx="310" cy="230" r="9"/>
+              </g>
+              <g class="network-outputs">
+                <circle cx="400" cy="70" r="9"/><text x="419" y="70">UP</text>
+                <circle cx="400" cy="150" r="9"/><text x="419" y="150">NEUTRAL</text>
+                <circle cx="400" cy="230" r="9"/><text x="419" y="230">DOWN</text>
+              </g>
+            </svg>
+            <figcaption class="stock-legend">模型结构示意 · 多源特征与三分类预测</figcaption>
+          </figure>
           <div class="project-copy">
             <p class="project-type">A 股 <span aria-hidden="true">/</span> 个人项目 <span aria-hidden="true">/</span> 在研</p>
-            <h3>股票端量化<br>选股策略</h3>
-            <p>根据基本面数据划分股票标的池，使用 XGBoost 分析指标特征、预测股票涨跌，并进行样本外回测。</p>
-            <span class="project-status"><b aria-hidden="true"></b> 研究进行中</span>
+            <h3 id="stock-title">中证1000<br>神经网络多空研究</h3>
+            <p>以中证1000历史成分股为研究对象，使用 Walk-forward MLP 预测横截面收益，融合量价、技术、财务与 LLM 提取的 JEV 公告事件特征。</p>
+            <p class="project-detail">覆盖2021–2026年、1,234个样本外交易日及约123万股票日。从分类、回归迭代至 UP / NEUTRAL / DOWN 三分类，研究尾部预测与多空组合表现。</p>
+            <div class="project-actions">
+              <a class="project-link" href="https://github.com/Chattan258/A-Share-Research" target="_blank" rel="noopener noreferrer">查看 GitHub 项目 <span aria-hidden="true">↗</span></a>
+              <span class="project-status"><b aria-hidden="true"></b> 持续研究中</span>
+            </div>
+          </div>
+          <div class="project-results" aria-label="神经网络多源融合模型的阶段回测结果">
+            <p class="results-caption">探索性融合模型 · 零交易成本回测</p>
+            <dl class="project-metrics">
+              <div><dt>年化收益</dt><dd>22.66%</dd></div>
+              <div><dt>Sharpe</dt><dd>1.97</dd></div>
+              <div><dt>最大回撤</dt><dd>8.83%</dd></div>
+            </dl>
+            <p class="results-note">阶段结果；研究同时检验滑点、交易成本及 Beta 暴露。方法、结果与研究限制见 GitHub 项目资料。</p>
           </div>
         </article>
       </div>
